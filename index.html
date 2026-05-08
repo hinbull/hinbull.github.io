@@ -129,6 +129,88 @@
         }
 
         /* --- Hosting --- */
+        .hosting-intro {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 18px;
+            padding: 36px;
+            margin-top: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+        }
+        .hosting-lead {
+            color: #444;
+            font-size: 1.02rem;
+            line-height: 1.9;
+            margin-bottom: 22px;
+        }
+        .hosting-section-title {
+            font-family: var(--poppins);
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-bottom: 14px;
+        }
+        .hosting-hero-image {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #ececec;
+        }
+        .hosting-features-grid {
+            column-count: 2;
+            column-gap: 24px;
+            margin-top: 18px;
+        }
+        .hosting-feature-box {
+            background: var(--soft-gray);
+            border: 1px solid #ececec;
+            border-radius: 14px;
+            padding: 20px;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 24px;
+            break-inside: avoid;
+        }
+        .hosting-feature-image {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1px solid #e6e6e6;
+        }
+        .hosting-feature-box h3 {
+            color: var(--primary);
+            font-family: var(--kanit);
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e4e4e4;
+        }
+        .hosting-feature-box ul {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+            color: #555;
+            line-height: 1.9;
+            font-size: 0.95rem;
+        }
+        .hosting-feature-box ul li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 6px;
+        }
+        .hosting-feature-box ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            top: 3px;
+            font-size: 0.72rem;
+        }
         .hosting-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
         .h-plan { 
             background: #fff; padding: 50px 30px; border-radius: 20px; text-align: center; 
@@ -178,6 +260,9 @@
             .philosophy-grid div { margin-bottom: 20px; }
             .c-form { padding: 30px; margin-top: 30px; }
             .portfolio-iframe-grid { grid-template-columns: 1fr; }
+            .hosting-intro { padding: 24px; }
+            .hosting-hero-image { height: 200px; }
+            .hosting-features-grid { column-count: 1; }
         }
     </style>
 </head>
@@ -323,42 +408,75 @@
         <h2>WEB HOSTING SOLUTIONS</h2>
         <p>บริการเช่าพื้นที่เว็บไซต์และโดเมนเนม ประสิทธิภาพสูง เสถียร และปลอดภัย</p>
     </div>
-    <div class="hosting-table">
-        <div class="h-plan">
-            <h3>STANDARD Linux</h3>
-            <div class="price">฿950<span>/year</span></div>
-            <ul>
-                <li><i class="fas fa-hdd"></i> Disk Space: 500 MB</li>
-                <li><i class="fas fa-chart-line"></i> Bandwidth: 5 GB /month</li>
-                <li><i class="fas fa-envelope"></i> Unlimited Email Accounts</li>
-                <li><i class="fas fa-database"></i> 5 MySQL Databases</li>
-            </ul>
-            <a href="#contact" class="btn" style="width:100%">Select</a>
-        </div>
-        <div class="h-plan featured">
-            <h3>PROFESSIONAL Plus</h3>
-            <div class="price">฿2,500<span>/year</span></div>
-            <ul>
-                <li><i class="fas fa-hdd"></i> Disk Space: 2 GB (SSD)</li>
-                <li><i class="fas fa-chart-line"></i> Bandwidth: 20 GB /month</li>
-                <li><i class="fas fa-lock"></i> Free SSL Certificate</li>
-                <li><i class="fas fa-cogs"></i> DirectAdmin / cPanel</li>
-                <li><i class="fas fa-database"></i> Unlimited MySQL</li>
-            </ul>
-            <a href="#contact" class="btn" style="width:100%">Select</a>
-        </div>
-        <div class="h-plan">
-            <h3>WINDOWS Server</h3>
-            <div class="price">฿4,500<span>/year</span></div>
-            <ul>
-                <li><i class="fas fa-hdd"></i> Disk Space: 1 GB (SSD)</li>
-                <li><i class="fas fa-chart-line"></i> Bandwidth: 10 GB /month</li>
-                <li><i class="fas fa-code"></i> ASP.NET & SQL Support</li>
-                <li><i class="fas fa-envelope"></i> 50 Email Accounts</li>
-            </ul>
-            <a href="#contact" class="btn" style="width:100%">Select</a>
+    <div class="hosting-intro">
+        <img class="hosting-hero-image" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1400&auto=format&fit=crop" alt="Cloud hosting and server infrastructure">
+        <p class="hosting-lead">IdeaZign มีบริการจดโดเมน และบริการให้เช่าพื้นที่โฮสติ้ง เพื่อรองรับการใช้งานเว็บไซต์ผ่านระบบเครือข่ายอินเตอร์เน็ต โดยทางเรามีทีมพันธมิตร คือ click2server ซึ่งเป็นพันธมิตรทางการค้าที่จะคอยดูแลด้านโดเมน และโฮสติ้งให้กับท่านโดยเฉพาะ เนื่องจากเราเห็นว่างานบริการด้านนี้จำเป็นจะต้องมีฝ่าย support ที่มีความชำนาญ และให้คำปรึกษากับท่านได้ดี ซึ่งทีม click2server สามารถให้บริการในจุดนี้ได้เป็นอย่างดี</p>
+        <h3 class="hosting-section-title">รายละเอียดและฟีเจอร์การให้บริการ</h3>
+
+        <div class="hosting-features-grid">
+            <div class="hosting-feature-box">
+                <img class="hosting-feature-image" src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?q=80&w=1000&auto=format&fit=crop" alt="Server hardware room">
+                <h3>รายละเอียด และคุณสมบัติของ Server</h3>
+                <ul>
+                    <li>Microsoft Windows 2003 Server</li>
+                    <li>CPU Intel 2.4 GHz</li>
+                    <li>ECC Memory 1 GB</li>
+                    <li>Network Link 4 Gbps</li>
+                    <li>สามารถทดลองใช้งานก่อนได้ 7 วัน</li>
+                    <li>รับประกันความพอใจ ยินดีคืนเงินภายใน 30 วัน</li>
+                    <li>เว็บเมล์สำหรับเช็คอีเมล์ - ระบบ Control Panel บริการเว็บไซต์</li>
+                    <li>รองรับโดเมนทุกประเภท อาทิเช่น .com, .net, .org, .co.th, .in.th, .or.th, .ac.th</li>
+                    <li>สามารถเข้า Website ได้ โดยไม่ต้องพิมพ์ "www."</li>
+                    <li>Data Backup - มีสถิติบันทึกข้อมูลของผู้เข้าชม</li>
+                    <li>สามารถอัปโหลดข้อมูลผ่านเว็บได้</li>
+                    <li>Virus Protection for E-mail and Website</li>
+                </ul>
+            </div>
+
+            <div class="hosting-feature-box">
+                <img class="hosting-feature-image" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop" alt="Technical support team">
+                <h3>Support Features</h3>
+                <ul>
+                    <li>7 วัน 24 ชม. Support by Mobile Phone and SMS</li>
+                    <li>Online Support by MSN and Email</li>
+                    <li>User Document</li>
+                    <li>News Member</li>
+                </ul>
+            </div>
+
+            <div class="hosting-feature-box">
+                <img class="hosting-feature-image" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1000&auto=format&fit=crop" alt="Email communication system">
+                <h3>Email Features</h3>
+                <ul>
+                    <li>POP3 Mailbox</li>
+                    <li>CatchAll Support</li>
+                    <li>WebMail</li>
+                    <li>Unlimited Email Auto Responders</li>
+                    <li>Unlimited Email Forwarder</li>
+                    <li>Email Virus and Spam protection</li>
+                </ul>
+            </div>
+
+            <div class="hosting-feature-box">
+                <img class="hosting-feature-image" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1000&auto=format&fit=crop" alt="Web development environment">
+                <h3>Development Features</h3>
+                <ul>
+                    <li>IIS 6.0</li>
+                    <li>ASP, ASP.NET, PHP, Perl, XML</li>
+                    <li>DSN ODBC</li>
+                    <li>JavaScript</li>
+                    <li>ADO 2.8</li>
+                    <li>Dimac W3 JMail</li>
+                    <li>ASPDundas Upload</li>
+                    <li>CDONTS</li>
+                    <li>FrontPage Extensions</li>
+                    <li>Component อื่นๆ ที่ท่านต้องการใช้งาน</li>
+                </ul>
+            </div>
+
         </div>
     </div>
+    
 </section>
 
 <section id="contact">
