@@ -97,12 +97,36 @@
         /* --- Portfolio --- */
         #portfolio { background: var(--dark-surface); color: #fff; }
         .port-title-block h2 { color: #fff; }
-        .port-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
-        .port-card { background: var(--dark-card); padding: 25px; border-radius: 15px; text-align: center; border: 1px solid #333; transition: 0.3s; }
-        .port-card:hover { border-color: var(--primary); transform: scale(1.03); }
-        .port-card img { width: 100%; border-radius: 8px; margin-bottom: 15px; filter: grayscale(100%); transition: 0.3s; }
-        .port-card:hover img { filter: grayscale(0%); }
-        .port-card h4 { color: #eee; font-family: var(--kanit); font-size: 1.1rem; }
+        .portfolio-iframe-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+        .portfolio-iframe-card {
+            background: var(--dark-card);
+            border: 1px solid #333;
+            border-radius: 14px;
+            padding: 18px;
+            transition: 0.3s;
+        }
+        .portfolio-iframe-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+        }
+        .portfolio-iframe-card h4 {
+            color: #f2f2f2;
+            font-family: var(--kanit);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        .portfolio-iframe-frame {
+            width: 100%;
+            height: 520px;
+            border: 1px solid #2c2c2c;
+            border-radius: 10px;
+            background: #fff;
+        }
 
         /* --- Hosting --- */
         .hosting-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
@@ -153,6 +177,7 @@
             .about-img { margin-top: 40px; width: 100%; }
             .philosophy-grid div { margin-bottom: 20px; }
             .c-form { padding: 30px; margin-top: 30px; }
+            .portfolio-iframe-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -249,7 +274,7 @@
         </div>
         <div class="about-img">
             <!-- Modern Tech Cycle / IT Development Loop Illustration Placeholder -->
-            <img src="https://via.placeholder.com/600x600/121212/ffffff?text=Modern+Tech+Cycle+Illustration" alt="ideaZign Tech Cycle Concept">
+            <img src="home_image.jpg" alt="ideaZign Tech Cycle Concept">
         </div>
     </div>
 </section>
@@ -259,30 +284,36 @@
         <h2>OUR PORTFOLIO</h2>
         <p>ตัวอย่างผลงานที่เราทุ่มเท เพื่อสร้างความสำเร็จให้กับลูกค้าของเรา</p>
     </div>
-    <div class="port-grid">
-        <div class="port-card">
-            <img src="https://via.placeholder.com/200x150/333/ffffff?text=LifeFord+Web" alt="LIFEFORD">
-            <h4>LifeFord (Thailand) Website</h4>
+    <div class="portfolio-iframe-grid">
+        <div class="portfolio-iframe-card">
+            <h4>1. Website Portfolio</h4>
+            <iframe
+                class="portfolio-iframe-frame"
+                src="http://www.ideazign.com/thai/port_menu_web.htm"
+                title="Website Portfolio"
+                loading="lazy"
+                scrolling="yes">
+            </iframe>
         </div>
-        <div class="port-card">
-            <img src="https://via.placeholder.com/200x150/666/ffffff?text=U+Star+Packaging" alt="U STAR">
-            <h4>U STAR Packaging Design</h4>
+        <div class="portfolio-iframe-card">
+            <h4>2. Graphic Portfolio</h4>
+            <iframe
+                class="portfolio-iframe-frame"
+                src="http://www.ideazign.com/thai/port_menu_grap.htm"
+                title="Graphic Portfolio"
+                loading="lazy"
+                scrolling="yes">
+            </iframe>
         </div>
-        <div class="port-card">
-            <img src="https://via.placeholder.com/200x150/333/ffffff?text=Marine+Database" alt="Marine">
-            <h4>Marine Aquarium System</h4>
-        </div>
-        <div class="port-card">
-            <img src="https://via.placeholder.com/200x150/666/ffffff?text=Sharpformulators" alt="Sharp">
-            <h4>Sharpformulators Profile</h4>
-        </div>
-        <div class="port-card">
-            <img src="https://via.placeholder.com/200x150/333/ffffff?text=Interactive+CBT" alt="CBT">
-            <h4>Interactive CBT Media</h4>
-        </div>
-        <div class="port-card">
-            <img src="https://via.placeholder.com/200x150/666/ffffff?text=Video+Presentation" alt="Video">
-            <h4>Video Presentation Project</h4>
+        <div class="portfolio-iframe-card">
+            <h4>3. Multimedia Portfolio</h4>
+            <iframe
+                class="portfolio-iframe-frame"
+                src="http://www.ideazign.com/thai/port_menu_mul.htm"
+                title="Multimedia Portfolio"
+                loading="lazy"
+                scrolling="yes">
+            </iframe>
         </div>
     </div>
 </section>
@@ -302,7 +333,7 @@
                 <li><i class="fas fa-envelope"></i> Unlimited Email Accounts</li>
                 <li><i class="fas fa-database"></i> 5 MySQL Databases</li>
             </ul>
-            <a href="#contact" class="btn" style="width:100%">선택 (Select)</a>
+            <a href="#contact" class="btn" style="width:100%">Select</a>
         </div>
         <div class="h-plan featured">
             <h3>PROFESSIONAL Plus</h3>
@@ -314,7 +345,7 @@
                 <li><i class="fas fa-cogs"></i> DirectAdmin / cPanel</li>
                 <li><i class="fas fa-database"></i> Unlimited MySQL</li>
             </ul>
-            <a href="#contact" class="btn" style="width:100%">선택 (Select)</a>
+            <a href="#contact" class="btn" style="width:100%">Select</a>
         </div>
         <div class="h-plan">
             <h3>WINDOWS Server</h3>
@@ -325,7 +356,7 @@
                 <li><i class="fas fa-code"></i> ASP.NET & SQL Support</li>
                 <li><i class="fas fa-envelope"></i> 50 Email Accounts</li>
             </ul>
-            <a href="#contact" class="btn" style="width:100%">선택 (Select)</a>
+            <a href="#contact" class="btn" style="width:100%">Select</a>
         </div>
     </div>
 </section>
@@ -383,7 +414,7 @@
         <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
     <div class="f-logo">idea<span>Zign</span> Group</div>
-    <p>Copyright © 2026 ideaZign Group. All rights reserved.<br>
+    <p>Copyright © ideaZign Group. All rights reserved.<br>
     ออกแบบและพัฒนาโดยทีมงานมืออาชีพ รองรับ SEO และ Mobile-First Indexing</p>
 </footer>
 
